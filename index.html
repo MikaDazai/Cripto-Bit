@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cripto Bit</title>
+    <script>
+      async function fetchPrices() {
+        const response = await fetch(
+          "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,binancecoin,solana&vs_currencies=usd"
+        );
+        const data = await response.json();
+        document.getElementById(
+          "btc-price"
+        ).textContent = `$${data.bitcoin.usd.toLocaleString()}`;
+        document.getElementById(
+          "eth-price"
+        ).textContent = `$${data.ethereum.usd.toLocaleString()}`;
+        document.getElementById(
+          "bnb-price"
+        ).textContent = `$${data.binancecoin.usd.toLocaleString()}`;
+        document.getElementById(
+          "sol-price"
+        ).textContent = `$${data.solana.usd.toLocaleString()}`;
+      }
+      window.onload = fetchPrices;
+    </script>
+    <style>
+      body {
+        background-color: #0a0f0c;
+        color: #f0fdf4;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+      }
+      header,
+      footer,
+      section,
+      nav,
+      div {
+        padding: 1rem;
+      }
+      .btn {
+        background-color: #00ff00;
+        color: black;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #a3ff3f;
+      }
+      .card {
+        background-color: #102e26;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 255, 0, 0.15);
+        margin: 1rem auto;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-bold {
+        font-weight: bold;
+      }
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .hero-text,
+      .price-card {
+        flex: 1;
+        min-width: 250px;
+      }
+      .nav-bar {
+        background-color: #132b20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        flex-wrap: wrap;
+      }
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+      }
+      .nav-left img {
+        width: 32px;
+        height: 32px;
+      }
+      .nav-left span {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .nav-link {
+        color: #f0fdf4;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+      }
+      .nav-link:hover {
+        background-color: #1a4d2e;
+      }
+      .login-btn {
+        background-color: #1f2937;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+      .register-btn {
+        background-color: #00ff00;
+        color: black;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+      .register-btn:hover {
+        background-color: #a3ff3f;
+      }
+      .search-icon {
+        color: white;
+        font-size: 1.25rem;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav-bar">
+      <div class="nav-left">
+        <img src="Logo_CriptooBit.png" alt="CriptoBit Logo" />
+        <span>CriptoBit</span>
+        <nav class="nav-links">
+          <a href="#" class="nav-link">Купити криптовалюту</a>
+          <a href="#markets" class="nav-link">Ринки</a>
+          <a href="#trade" class="nav-link">Торгівля</a>
+          <a href="#learn" class="nav-link">Ф'ючерси</a>
+          <a href="#" class="nav-link">Earn</a>
+          <a href="#news" class="nav-link">Square</a>
+          <a href="#about" class="nav-link">Докладніше</a>
+          <span class="search-icon">🔍</span>
+          <button class="login-btn">Увійти</button>
+          <button class="register-btn">Реєстрація</button>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <div class="flex-container">
+        <div class="hero-text">
+          <h1 class="text-bold" style="font-size: 2rem">Cripto Bit</h1>
+          <p style="font-size: 1.2rem">Твій гід у світі криптовалют</p>
+          <a href="https://t.me/cripto_bit1" target="_blank" class="btn"
+            >Приєднатися до Telegram</a
+          >
+        </div>
+        <div class="card price-card">
+          <h2 class="text-bold">📊 Онлайн курс</h2>
+          <div>
+            <div style="display: flex; justify-content: space-between">
+              <span><strong>BTC</strong> Bitcoin</span>
+              <span id="btc-price">Завантаження...</span>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span><strong>ETH</strong> Ethereum</span>
+              <span id="eth-price">Завантаження...</span>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span><strong>BNB</strong> Binance Coin</span>
+              <span id="bnb-price">Завантаження...</span>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <span><strong>SOL</strong> Solana</span>
+              <span id="sol-price">Завантаження...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2 class="text-bold">Що таке Cripto Bit?</h2>
+      <p>
+        Cripto Bit — це майданчик для всіх, хто хоче розуміти крипту. Актуальні
+        новини, аналітика, поради та анонси — просто, зрозуміло та щодня.
+      </p>
+    </section>
+
+    <section class="card" style="margin-top: 1rem">
+      <h2 class="text-bold text-center">Наші переваги</h2>
+      <div class="flex-container">
+        <div style="flex: 1; min-width: 200px; text-align: center">
+          <div style="font-size: 2rem">⚡️</div>
+          <h3>Швидке оновлення інформації</h3>
+          <p>Ми завжди тримаємо руку на пульсі подій крипторинку.</p>
+        </div>
+        <div style="flex: 1; min-width: 200px; text-align: center">
+          <div style="font-size: 2rem">📚</div>
+          <h3>Освітній контент</h3>
+          <p>Доступні пояснення для новачків і просунутих трейдерів.</p>
+        </div>
+        <div style="flex: 1; min-width: 200px; text-align: center">
+          <div style="font-size: 2rem">🧠</div>
+          <h3>Аналітика та інсайти</h3>
+          <p>Отримуйте експертну думку та прогнози щодо ринку.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="learn" class="card">
+      <h3 class="text-bold">Що ти знайдеш у нас:</h3>
+      <ul>
+        <li>
+          <strong>Освіта:</strong> Зрозумілі пояснення навіть для новачків
+        </li>
+        <li>
+          <strong>Актуальні новини:</strong> Оперативна інформація з крипторинку
+        </li>
+        <li>
+          <strong>Анонси:</strong> Запуск нових проєктів, інсайти та важливі
+          події
+        </li>
+      </ul>
+    </section>
+
+    <footer class="text-center">
+      <p>Слідкуй за нами:</p>
+      <div>
+        <a href="https://t.me/cripto_bit1" target="_blank" class="btn"
+          >Telegram</a
+        >
+        <a
+          href="https://www.facebook.com/profile.php?id=61574800432416"
+          target="_blank"
+          class="btn"
+          >Facebook</a
+        >
+        <a
+          href="https://www.instagram.com/criptobit1/?locale=ru"
+          target="_blank"
+          class="btn"
+          >Instagram</a
+        >
+      </div>
+      <p>© 2025 Cripto Bit. Всі права захищено.</p>
+    </footer>
+  </body>
+</html>
