@@ -1,0 +1,118 @@
+      body {
+        background-color: #0a0f0c;
+        color: #f0fdf4;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+      }
+      header,
+      footer,
+      section,
+      nav,
+      div {
+        padding: 1rem;
+      }
+      .btn {
+        background-color: #00ff00;
+        color: black;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        display: inline-block;
+        transition: 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #a3ff3f;
+      }
+      .card {
+        background-color: #102e26;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 10px rgba(0, 255, 0, 0.15);
+        margin: 1rem auto;
+      }
+      .text-center {
+        text-align: center;
+      }
+      .text-bold {
+        font-weight: bold;
+      }
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .hero-text,
+      .price-card {
+        flex: 1;
+        min-width: 250px;
+      }
+      .nav-bar {
+        background-color: #132b20;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        flex-wrap: wrap;
+      }
+      .nav-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex: 1;
+      }
+      .nav-left img {
+        width: 32px;
+        height: 32px;
+      }
+      .nav-left span {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 0.8rem;
+        flex-wrap: wrap;
+      }
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .nav-link {
+        color: #f0fdf4;
+        text-decoration: none;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.5rem;
+      }
+      .nav-link:hover {
+        background-color: #1a4d2e;
+      }
+      .login-btn {
+        background-color: #1f2937;
+        color: white;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+      }
+      .register-btn {
+        background-color: #00ff00;
+        color: black;
+        padding: 0.5rem 1rem;
+        border: none;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        transition: 0.3s ease;
+      }
+      .register-btn:hover {
+        background-color: #a3ff3f;
+      }
+      .search-icon {
+        color: white;
+        font-size: 1.25rem;
+        cursor: pointer;
+      }
