@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cripto Bit - платформа про криптовалюти, ринок, новини та аналітику."
+    />
+    <title>Cripto Bit</title>
+    <link rel="icon" type="image/png" href="assets/images/crypto-bit-logo.png" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <img
+          class="brand__logo"
+          src="assets/images/crypto-bit-logo.png"
+          alt="Логотип Cripto Bit"
+        />
+        <div>
+          <p class="brand__eyebrow">Crypto community</p>
+          <span class="brand__name">Cripto Bit</span>
+        </div>
+      </div>
+
+      <nav class="site-nav" aria-label="Основна навігація">
+        <a href="#hero" class="nav-link">Головна</a>
+        <a
+          href="market.html"
+          class="nav-link"
+          target="_blank"
+          rel="noreferrer"
+          >Ринки</a
+        >
+        <a href="#learn" class="nav-link">Навчання</a>
+        <a href="#news" class="nav-link">Новини</a>
+        <a href="#about" class="nav-link">Про нас</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button" type="button" aria-label="Пошук">🔍</button>
+        <div class="nav-dropdown nav-dropdown--account">
+          <button
+            class="ghost-button nav-toggle"
+            type="button"
+            data-dropdown-toggle="account-menu"
+            aria-expanded="false"
+            aria-controls="account-menu"
+          >
+            Увійти
+          </button>
+          <div class="dropdown-panel account-dropdown" id="account-menu" hidden>
+            <div class="dropdown-heading">
+              <div>
+                <p class="section-tag">Account</p>
+                <h3>Створіть акаунт</h3>
+              </div>
+            </div>
+
+            <button class="google-button" type="button">Продовжити через Google</button>
+
+            <div class="dropdown-divider">
+              <span>або</span>
+            </div>
+
+            <form class="account-form">
+              <label class="field">
+                <span>Ім'я</span>
+                <input type="text" placeholder="Ваше ім'я" />
+              </label>
+              <label class="field">
+                <span>Email</span>
+                <input type="email" placeholder="you@example.com" />
+              </label>
+              <label class="field">
+                <span>Пароль</span>
+                <input type="password" placeholder="Створіть пароль" />
+              </label>
+              <button class="primary-button account-submit" type="submit">
+                Створити акаунт
+              </button>
+            </form>
+          </div>
+        </div>
+        <a
+          class="primary-button"
+          href="https://t.me/cripto_bit1"
+          target="_blank"
+          rel="noreferrer"
+          >Telegram</a
+        >
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero" id="hero">
+        <div class="hero__content">
+          <p class="section-tag">Криптовалюти без зайвого шуму</p>
+          <h1>Cripto Bit - твій гід у світі крипти</h1>
+          <p class="hero__lead">
+            Слідкуйте за ринком, читайте пояснення для новачків та отримуйте
+            короткі аналітичні огляди в одному місці.
+          </p>
+
+          <div class="hero__actions">
+            <a
+              href="https://t.me/cripto_bit1"
+              target="_blank"
+              rel="noreferrer"
+              class="primary-button"
+              >Приєднатися до Telegram</a
+            >
+            <a href="#about" class="secondary-button">Дізнатися більше</a>
+          </div>
+        </div>
+
+        <aside class="market-panel card" id="markets">
+          <div class="panel-heading">
+            <div>
+              <p class="section-tag">Live market</p>
+              <h2>Онлайн-курс</h2>
+            </div>
+            <span class="status-pill" id="price-status">Оновлюється</span>
+          </div>
+
+          <div class="price-list">
+            <div class="price-row">
+              <span><strong>BTC</strong> Bitcoin</span>
+              <span data-price-id="btc-price">Завантаження...</span>
+            </div>
+            <div class="price-row">
+              <span><strong>ETH</strong> Ethereum</span>
+              <span data-price-id="eth-price">Завантаження...</span>
+            </div>
+            <div class="price-row">
+              <span><strong>BNB</strong> Binance Coin</span>
+              <span data-price-id="bnb-price">Завантаження...</span>
+            </div>
+            <div class="price-row">
+              <span><strong>SOL</strong> Solana</span>
+              <span data-price-id="sol-price">Завантаження...</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card" id="about">
+        <p class="section-tag">Про платформу</p>
+        <h2>Що таке Cripto Bit?</h2>
+        <p>
+          Cripto Bit - це майданчик для всіх, хто хоче краще розуміти
+          крипторинок. Тут зібрані новини, базові пояснення, огляди трендів та
+          короткі підказки для щоденного стеження за ринком.
+        </p>
+      </section>
+
+      <section class="card">
+        <p class="section-tag">Переваги</p>
+        <h2>Чому користувачі обирають нас</h2>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <span class="feature-icon">⚡</span>
+            <h3>Швидкі оновлення</h3>
+            <p>Публікуємо важливі зміни на ринку без затримок та перевантаження.</p>
+          </article>
+          <article class="feature-card" id="learn">
+            <span class="feature-icon">📚</span>
+            <h3>Навчальний контент</h3>
+            <p>Пояснюємо складні теми простою мовою для новачків і трейдерів.</p>
+          </article>
+          <article class="feature-card" id="news">
+            <span class="feature-icon">🧠</span>
+            <h3>Аналітика та інсайти</h3>
+            <p>Допомагаємо швидко зрозуміти контекст і важливість ринкових подій.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="card">
+          <p class="section-tag">Що ви знайдете</p>
+          <h2>Усе найважливіше в одному місці</h2>
+          <ul class="info-list">
+            <li><strong>Освіта:</strong> зрозумілі пояснення навіть для новачків.</li>
+            <li><strong>Новини:</strong> оперативна інформація про ринок і тренди.</li>
+            <li><strong>Анонси:</strong> запуски проєктів, події та корисні добірки.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <p class="section-tag">Соцмережі</p>
+          <h2>Залишайтесь на зв'язку</h2>
+          <div class="social-links">
+            <a
+              href="https://t.me/cripto_bit1"
+              target="_blank"
+              rel="noreferrer"
+              class="secondary-button"
+              >Telegram</a
+            >
+            <a
+              href="https://www.facebook.com/profile.php?id=61574800432416"
+              target="_blank"
+              rel="noreferrer"
+              class="secondary-button"
+              >Facebook</a
+            >
+            <a
+              href="https://www.instagram.com/criptobit1/?locale=ru"
+              target="_blank"
+              rel="noreferrer"
+              class="secondary-button"
+              >Instagram</a
+            >
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Cripto Bit © 2025. Усі права захищено.</p>
+    </footer>
+  </body>
+</html>
